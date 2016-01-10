@@ -16,17 +16,17 @@
 		<Item Name="Sim Support Files" Type="Folder">
 			<Item Name="FRC SimulatedRSC" Type="Folder">
 				<Item Name="ive" Type="Folder">
-					<Item Name="4in Perf Wheel.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/4in Perf Wheel.ive"/>
-					<Item Name="AXIS M1011.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/AXIS M1011.ive"/>
-					<Item Name="Devantech SRF05.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/Devantech SRF05.ive"/>
-					<Item Name="FRC - Body.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/FRC - Body.ive"/>
-					<Item Name="Honeywell HMC6343.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/Honeywell HMC6343.ive"/>
-					<Item Name="Sparkfun Atomic IMU.ive" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC SimulatedRSC/ive/Sparkfun Atomic IMU.ive"/>
+					<Item Name="4in Perf Wheel.ive" Type="Document" URL="../FRC SimulatedRSC/ive/4in Perf Wheel.ive"/>
+					<Item Name="AXIS M1011.ive" Type="Document" URL="../FRC SimulatedRSC/ive/AXIS M1011.ive"/>
+					<Item Name="Devantech SRF05.ive" Type="Document" URL="../FRC SimulatedRSC/ive/Devantech SRF05.ive"/>
+					<Item Name="FRC - Body.ive" Type="Document" URL="../FRC SimulatedRSC/ive/FRC - Body.ive"/>
+					<Item Name="Honeywell HMC6343.ive" Type="Document" URL="../FRC SimulatedRSC/ive/Honeywell HMC6343.ive"/>
+					<Item Name="Sparkfun Atomic IMU.ive" Type="Document" URL="../FRC SimulatedRSC/ive/Sparkfun Atomic IMU.ive"/>
 				</Item>
 			</Item>
-			<Item Name="FRC Simulated.xml" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/FRC Simulated.xml"/>
+			<Item Name="FRC Simulated.xml" Type="Document" URL="../FRC Simulated.xml"/>
 		</Item>
-		<Item Name="Robot Simulation Readme.html" Type="Document" URL="../../../LabVIEW Data/2016 Robot Project/Robot Simulation Readme.html"/>
+		<Item Name="Robot Simulation Readme.html" Type="Document" URL="../Robot Simulation Readme.html"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -111,20 +111,20 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="Support Code" Type="Folder">
-			<Item Name="Elapsed Times.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Elapsed Times.vi"/>
+			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
 		<Item Name="Team Code" Type="Folder">
-			<Item Name="Autonomous Independent.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Autonomous Independent.vi"/>
-			<Item Name="Begin.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Begin.vi"/>
-			<Item Name="Disabled.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Disabled.vi"/>
-			<Item Name="Finish.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Finish.vi"/>
-			<Item Name="Periodic Tasks.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Periodic Tasks.vi"/>
-			<Item Name="Robot Global Data.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Robot Global Data.vi"/>
-			<Item Name="Teleop.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Teleop.vi"/>
-			<Item Name="Test.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Test.vi"/>
-			<Item Name="Vision Processing.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Vision Processing.vi"/>
+			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
+			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
+			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
+			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
+			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
+			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
+			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
+			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
 		</Item>
-		<Item Name="Robot Main.vi" Type="VI" URL="../../../LabVIEW Data/2016 Robot Project/Robot Main.vi"/>
+		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
