@@ -114,6 +114,9 @@ AddOutputFilter chunkFilter
 			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
 		<Item Name="Team Code" Type="Folder">
+			<Item Name="2x3CIM Close.vi" Type="VI" URL="../2x3CIM Close.vi"/>
+			<Item Name="2x3CIM Open.vi" Type="VI" URL="../2x3CIM Open.vi"/>
+			<Item Name="2x3CIM Set Output.vi" Type="VI" URL="../2x3CIM Set Output.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
