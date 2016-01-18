@@ -41,6 +41,7 @@
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
 		<Property Name="host.TargetCPUID" Type="UInt">8</Property>
 		<Property Name="host.TargetOSID" Type="UInt">8</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
 		<Property Name="target.DoNotReboot" Type="Bool">true</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
@@ -114,9 +115,12 @@ AddOutputFilter chunkFilter
 			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
 		</Item>
 		<Item Name="Team Code" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="2x3CIM Close.vi" Type="VI" URL="../2x3CIM Close.vi"/>
 			<Item Name="2x3CIM Open.vi" Type="VI" URL="../2x3CIM Open.vi"/>
 			<Item Name="2x3CIM Set Output.vi" Type="VI" URL="../2x3CIM Set Output.vi"/>
+			<Item Name="Aim via Angle.vi" Type="VI" URL="../Aim via Angle.vi"/>
+			<Item Name="Aim via Speed.vi" Type="VI" URL="../Aim via Speed.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
@@ -126,11 +130,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
+			<Item Name="WheelShooter Close.vi" Type="VI" URL="../WheelShooter Close.vi"/>
+			<Item Name="WheelShooter Open.vi" Type="VI" URL="../WheelShooter Open.vi"/>
+			<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../WheelShooter Shoot.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
-		<Item Name="WheelShoot.vi" Type="VI" URL="../WheelShoot.vi"/>
-		<Item Name="WheelShooter Close.vi" Type="VI" URL="../WheelShooter Close.vi"/>
-		<Item Name="WheelShooter Open.vi" Type="VI" URL="../WheelShooter Open.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
