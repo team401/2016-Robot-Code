@@ -1,9 +1,5 @@
 [My Computer]
-<<<<<<< HEAD
-My Computer = "192.168.13.108"
-=======
-My Computer = "192.168.15.201"
->>>>>>> origin/master
+My Computer = "127.0.0.1"
 
 [Target]
 Target = "roboRIO-401-FRC.local"
