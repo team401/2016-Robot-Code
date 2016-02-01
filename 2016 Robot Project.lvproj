@@ -885,6 +885,8 @@ AddOutputFilter chunkFilter
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
 			<Item Name="Custom Drive Motors.vi" Type="VI" URL="../Custom Drive Motors.vi"/>
+			<Item Name="CreateVisionCluster.vi" Type="VI" URL="../../dataDisplay/labview_test/CreateVisionCluster.vi"/>
+			<Item Name="ParseVisionData.vi" Type="VI" URL="../../dataDisplay/labview_test/ParseVisionData.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
