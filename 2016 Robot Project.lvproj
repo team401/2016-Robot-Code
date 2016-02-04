@@ -27,12 +27,13 @@
 			<Item Name="FRC Simulated.xml" Type="Document" URL="../FRC Simulated.xml"/>
 		</Item>
 		<Item Name="Robot Simulation Readme.html" Type="Document" URL="../Robot Simulation Readme.html"/>
-		<Item Name="rangescalc.vi" Type="VI" URL="../rangescalc.vi"/>
+		<Item Name="Vertical Aiming Calculator.vi" Type="VI" URL="../Vertical Aiming Calculator.vi"/>
 		<Item Name="start.vi" Type="VI" URL="../start.vi"/>
 		<Item Name="subthing.vi" Type="VI" URL="../subthing.vi"/>
 		<Item Name="thing.vi" Type="VI" URL="../thing.vi"/>
 		<Item Name="speedscalc.vi" Type="VI" URL="../speedscalc.vi"/>
 		<Item Name="speed.vi" Type="VI" URL="../speed.vi"/>
+		<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
