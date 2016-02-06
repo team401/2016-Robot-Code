@@ -43,11 +43,8 @@
 				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
 				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
 			</Item>
-<<<<<<< HEAD
 			<Item Name="Gunsim Precalc.vi" Type="VI" URL="../Gunsim Precalc.vi"/>
-=======
 			<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../Gunsim Initial Position.vi"/>
->>>>>>> origin/master
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -903,11 +900,8 @@ AddOutputFilter chunkFilter
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
 			<Item Name="Custom Drive Motors.vi" Type="VI" URL="../Custom Drive Motors.vi"/>
-<<<<<<< HEAD
-=======
 			<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../WheelShooter Read Spreadsheet.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
->>>>>>> origin/master
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
