@@ -895,6 +895,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Custom Drive Motors.vi" Type="VI" URL="../Custom Drive Motors.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
 			<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../WheelShooter Aimbot.vi"/>
+			<Item Name="WheelShooter Master.vi" Type="VI" URL="../WheelShooter Master.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
