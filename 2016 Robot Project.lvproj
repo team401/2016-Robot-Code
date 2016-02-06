@@ -44,7 +44,6 @@
 				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
 			</Item>
 			<Item Name="Gunsim Precalc.vi" Type="VI" URL="../Gunsim Precalc.vi"/>
-			<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../Gunsim Initial Position.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -876,6 +875,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_AnalogChannelToAnalogModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelToAnalogModule.vi"/>
 				<Item Name="WPI_AnalogChannelGetAverageVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelGetAverageVoltage.vi"/>
 				<Item Name="WPI_PotentiometerGetNormalized.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerGetNormalized.vi"/>
+				<Item Name="WPI_PotentiometerClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerClose.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -900,7 +900,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
 			<Item Name="Custom Drive Motors.vi" Type="VI" URL="../Custom Drive Motors.vi"/>
-			<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../WheelShooter Read Spreadsheet.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
