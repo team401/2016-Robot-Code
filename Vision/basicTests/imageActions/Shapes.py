@@ -18,5 +18,4 @@ cv2.putText(img,'Leeyum',(10,480), font, 4,(255,255,255),2,cv2.LINE_AA)
 cv2.imshow('Face', img)
 cv2.waitKey(50000)& 0xFF == ord('q') #Hit 'q' to quit
 
-cap.release()
 cv2.destroyAllWindows()
