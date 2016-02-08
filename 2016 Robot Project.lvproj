@@ -892,10 +892,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Gyro Correction.vi" Type="VI" URL="../Gyro Correction.vi"/>
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
-			<Item Name="Custom Drive Motors.vi" Type="VI" URL="../Custom Drive Motors.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
 			<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../WheelShooter Aimbot.vi"/>
 			<Item Name="WheelShooter Master.vi" Type="VI" URL="../WheelShooter Master.vi"/>
+			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../../../LabVIEW Data/2016 Test Bot/Robot Global Data.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
