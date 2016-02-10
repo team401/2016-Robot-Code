@@ -897,6 +897,9 @@ AddOutputFilter chunkFilter
 			<Item Name="WheelShooter Master.vi" Type="VI" URL="../WheelShooter Master.vi"/>
 			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../../../LabVIEW Data/2016 Test Bot/Robot Global Data.vi"/>
+			<Item Name="WheelShooter Shoot(Aimbot).vi" Type="VI" URL="../WheelShooter Shoot(Aimbot).vi"/>
+			<Item Name="Firing Cluster.ctl" Type="VI" URL="../Firing Cluster.ctl"/>
+			<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../WheelShooter Shoot(Manual).vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
