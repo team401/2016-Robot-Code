@@ -161,10 +161,10 @@ AddOutputFilter chunkFilter
 			<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../../WheelShooter Shoot(Manual).vi"/>
 			<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../../WheelShooter Shoot.vi"/>
 		</Item>
-		<Item Name="Robot Main.vi" Type="VI" URL="../../Robot Main.vi"/>
 		<Item Name="TeleopTest.vi" Type="VI" URL="../TeleopTest.vi"/>
 		<Item Name="BeginTest.vi" Type="VI" URL="../BeginTest.vi"/>
 		<Item Name="Periodic Tasks Test.vi" Type="VI" URL="../Periodic Tasks Test.vi"/>
+		<Item Name="Robot MainTest.vi" Type="VI" URL="../Robot MainTest.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -925,7 +925,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[0].itemID" Type="Str">{DB01CD21-4447-4671-A00A-D774E7A6FDE1}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/Target/Robot Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref"></Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
