@@ -111,13 +111,13 @@ while(True):
                         pixelWidth = (rect[1][0])
                         
                         # Only draws around the the shape with the biggest area
-                        image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
+#                        image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
                         
                         # Finds distance
                         distance = ((20 * focalLength) / (pixelWidth))
-
                         # Removes noise by filtering out things with a volume of less than 20
-                        if distance <= 20:
+                        print(pixelWidth)
+                        if distance <= 10:
                             pass
                         else:
                             # displays the Angle, Distance, and Focal Length
