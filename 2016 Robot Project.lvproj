@@ -27,22 +27,7 @@
 			<Item Name="FRC Simulated.xml" Type="Document" URL="../FRC Simulated.xml"/>
 		</Item>
 		<Item Name="Robot Simulation Readme.html" Type="Document" URL="../Robot Simulation Readme.html"/>
-		<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../Gunsim Initial Position.vi"/>
-		<Item Name="Gunsim Update Position.vi" Type="VI" URL="../Gunsim Update Position.vi"/>
-		<Item Name="Gunsim Simulate.vi" Type="VI" URL="../Gunsim Simulate.vi"/>
-		<Item Name="Gunsim.vi" Type="VI" URL="../Gunsim.vi"/>
-		<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
-		<Item Name="Gunsim Precalc.vi" Type="VI" URL="../Gunsim Precalc.vi"/>
-		<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../Gunsim Vision Adapter.vi"/>
-		<Item Name="Dependencies" Type="Dependencies">
-			<Item Name="vi.lib" Type="Folder">
-				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
-				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
-				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
-				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
-				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
-			</Item>
-		</Item>
+		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
 	<Item Name="Target" Type="RT myRIO">
@@ -131,9 +116,27 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Team Code" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="2x3CIM Close.vi" Type="VI" URL="../2x3CIM Close.vi"/>
-			<Item Name="2x3CIM Open.vi" Type="VI" URL="../2x3CIM Open.vi"/>
-			<Item Name="2x3CIM Set Output.vi" Type="VI" URL="../2x3CIM Set Output.vi"/>
+			<Item Name="Firing Code" Type="Folder">
+				<Item Name="Firing Cluster.ctl" Type="VI" URL="../Firing Cluster.ctl"/>
+				<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../WheelShooter Aimbot.vi"/>
+				<Item Name="WheelShooter Close.vi" Type="VI" URL="../WheelShooter Close.vi"/>
+				<Item Name="WheelShooter Collect.vi" Type="VI" URL="../WheelShooter Collect.vi"/>
+				<Item Name="WheelShooter Get Config.vi" Type="VI" URL="../WheelShooter Get Config.vi"/>
+				<Item Name="WheelShooter Manual.vi" Type="VI" URL="../WheelShooter Manual.vi"/>
+				<Item Name="WheelShooter Open.vi" Type="VI" URL="../WheelShooter Open.vi"/>
+				<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../WheelShooter Read Spreadsheet.vi"/>
+				<Item Name="WheelShooter Shoot(Aimbot).vi" Type="VI" URL="../WheelShooter Shoot(Aimbot).vi"/>
+				<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../WheelShooter Shoot(Manual).vi"/>
+				<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../WheelShooter Shoot.vi"/>
+			</Item>
+			<Item Name="Firing Simulation" Type="Folder">
+				<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../Gunsim Initial Position.vi"/>
+				<Item Name="Gunsim Precalc.vi" Type="VI" URL="../Gunsim Precalc.vi"/>
+				<Item Name="Gunsim Simulate.vi" Type="VI" URL="../Gunsim Simulate.vi"/>
+				<Item Name="Gunsim Update Position.vi" Type="VI" URL="../Gunsim Update Position.vi"/>
+				<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../Gunsim Vision Adapter.vi"/>
+				<Item Name="Gunsim.vi" Type="VI" URL="../Gunsim.vi"/>
+			</Item>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
@@ -141,7 +144,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
-			<Item Name="Firing Cluster.ctl" Type="VI" URL="../Firing Cluster.ctl"/>
 			<Item Name="GetVisionFiringBox.vi" Type="VI" URL="../GetVisionFiringBox.vi"/>
 			<Item Name="Gyro Correction.vi" Type="VI" URL="../Gyro Correction.vi"/>
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
@@ -151,16 +153,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
-			<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../WheelShooter Aimbot.vi"/>
-			<Item Name="WheelShooter Close.vi" Type="VI" URL="../WheelShooter Close.vi"/>
-			<Item Name="WheelShooter Collect.vi" Type="VI" URL="../WheelShooter Collect.vi"/>
-			<Item Name="WheelShooter Get Config.vi" Type="VI" URL="../WheelShooter Get Config.vi"/>
-			<Item Name="WheelShooter Manual.vi" Type="VI" URL="../WheelShooter Manual.vi"/>
-			<Item Name="WheelShooter Open.vi" Type="VI" URL="../WheelShooter Open.vi"/>
-			<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../WheelShooter Read Spreadsheet.vi"/>
-			<Item Name="WheelShooter Shoot(Aimbot).vi" Type="VI" URL="../WheelShooter Shoot(Aimbot).vi"/>
-			<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../WheelShooter Shoot(Manual).vi"/>
-			<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../WheelShooter Shoot.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -881,6 +873,11 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
 				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
 				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
+				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
+				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
+				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
+				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
+				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -897,6 +894,8 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="2x3CIM Open.vi" Type="VI" URL="../2x3CIM Open.vi"/>
+			<Item Name="2x3CIM Close.vi" Type="VI" URL="../2x3CIM Close.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">

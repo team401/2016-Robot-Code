@@ -131,9 +131,6 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Team Code" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="2x3CIM Close.vi" Type="VI" URL="../../2x3CIM Close.vi"/>
-			<Item Name="2x3CIM Open.vi" Type="VI" URL="../../2x3CIM Open.vi"/>
-			<Item Name="2x3CIM Set Output.vi" Type="VI" URL="../../2x3CIM Set Output.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../../Angle to Encoder Ticks.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../../Begin.vi"/>
@@ -878,6 +875,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_SolenoidSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyConfig.vi"/>
 				<Item Name="WPI_SolenoidSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyTest.vi"/>
 				<Item Name="WPI_CANTalonSRX_SetPID.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_SetPID.vi"/>
+				<Item Name="WPI_DigitalInputRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Set.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -894,6 +892,8 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="2x3CIM Close.vi" Type="VI" URL="../../2x3CIM Close.vi"/>
+			<Item Name="2x3CIM Open.vi" Type="VI" URL="../../2x3CIM Open.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
