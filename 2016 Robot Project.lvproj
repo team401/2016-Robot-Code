@@ -117,17 +117,18 @@ AddOutputFilter chunkFilter
 		<Item Name="Team Code" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="Firing Code" Type="Folder">
-				<Item Name="Firing Cluster.ctl" Type="VI" URL="../Firing Cluster.ctl"/>
-				<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../WheelShooter Aimbot.vi"/>
-				<Item Name="WheelShooter Close.vi" Type="VI" URL="../WheelShooter Close.vi"/>
-				<Item Name="WheelShooter Collect.vi" Type="VI" URL="../WheelShooter Collect.vi"/>
-				<Item Name="WheelShooter Get Config.vi" Type="VI" URL="../WheelShooter Get Config.vi"/>
-				<Item Name="WheelShooter Manual.vi" Type="VI" URL="../WheelShooter Manual.vi"/>
-				<Item Name="WheelShooter Open.vi" Type="VI" URL="../WheelShooter Open.vi"/>
-				<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../WheelShooter Read Spreadsheet.vi"/>
-				<Item Name="WheelShooter Shoot(Aimbot).vi" Type="VI" URL="../WheelShooter Shoot(Aimbot).vi"/>
-				<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../WheelShooter Shoot(Manual).vi"/>
-				<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../WheelShooter Shoot.vi"/>
+				<Item Name="Aimbot.vi" Type="VI" URL="../Aimbot.vi"/>
+				<Item Name="Bundle.ctl" Type="VI" URL="../Firing Code/Bundle.ctl"/>
+				<Item Name="Close.vi" Type="VI" URL="../Firing Code/Close.vi"/>
+				<Item Name="Collect.vi" Type="VI" URL="../Firing Code/Collect.vi"/>
+				<Item Name="Get Config.vi" Type="VI" URL="../Get Config.vi"/>
+				<Item Name="Manual.vi" Type="VI" URL="../Firing Code/Manual.vi"/>
+				<Item Name="Open.vi" Type="VI" URL="../Firing Code/Open.vi"/>
+				<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Read Spreadsheet.vi"/>
+				<Item Name="Set Angle.vi" Type="VI" URL="../Firing Code/Set Angle.vi"/>
+				<Item Name="Shoot(Aimbot).vi" Type="VI" URL="../Firing Code/Shoot(Aimbot).vi"/>
+				<Item Name="Shoot(Manual).vi" Type="VI" URL="../Firing Code/Shoot(Manual).vi"/>
+				<Item Name="Shoot.vi" Type="VI" URL="../Firing Code/Shoot.vi"/>
 			</Item>
 			<Item Name="Firing Simulation" Type="Folder">
 				<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../Gunsim Initial Position.vi"/>
@@ -137,7 +138,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../Gunsim Vision Adapter.vi"/>
 				<Item Name="Gunsim.vi" Type="VI" URL="../Gunsim.vi"/>
 			</Item>
-			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Angle to Encoder Ticks.vi"/>
+			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Firing Code/Angle to Encoder Ticks.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
@@ -746,8 +747,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_UtilitiesTimebaseConstants.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_UtilitiesTimebaseConstants.vi"/>
 				<Item Name="Write Value Core.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Write Value Core.vi"/>
 				<Item Name="WPI_CANTalonSRX_ResetIntegralAccumulator.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ResetIntegralAccumulator.vi"/>
-				<Item Name="WPI_MotorControlSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlSafetyTest.vi"/>
-				<Item Name="WPI_MotorControlSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlSafetyConfig.vi"/>
 				<Item Name="FPGA_EncoderReadTimerOutput.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Encoder/FPGA_EncoderReadTimerOutput.vi"/>
 				<Item Name="FPGA_EncoderReadOutput.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Encoder/FPGA_EncoderReadOutput.vi"/>
 				<Item Name="FPGA_CounterReadTimerOutput.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterReadTimerOutput.vi"/>
@@ -805,22 +804,19 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_AnalogChannelGetAverageVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelGetAverageVoltage.vi"/>
 				<Item Name="WPI_PotentiometerGetNormalized.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerGetNormalized.vi"/>
 				<Item Name="WPI_PotentiometerClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerClose.vi"/>
-				<Item Name="WPI_SolenoidSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyConfig.vi"/>
-				<Item Name="WPI_SolenoidSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyTest.vi"/>
 				<Item Name="WPI_DigitalInputRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Set.vi"/>
 				<Item Name="WPI_DigitalInputRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Get.vi"/>
 				<Item Name="WPI_DigitalInputGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputGetValue.vi"/>
 				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
 				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
 				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
-				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
-				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
-				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
-				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
-				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
-				<Item Name="WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigPotenNumberTurns.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigPotenNumberTurns.vi"/>
+				<Item Name="WPI_SolenoidSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyTest.vi"/>
+				<Item Name="WPI_SolenoidSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyConfig.vi"/>
 				<Item Name="WPI_CANTalonSRX_SetPID.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_SetPID.vi"/>
+				<Item Name="WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi"/>
+				<Item Name="WPI_MotorControlSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlSafetyTest.vi"/>
+				<Item Name="WPI_MotorControlSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlSafetyConfig.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -837,6 +833,9 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Get Config.vi" Type="VI" URL="../Firing Code/Get Config.vi"/>
+			<Item Name="Aimbot.vi" Type="VI" URL="../Firing Code/Aimbot.vi"/>
+			<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Firing Code/Read Spreadsheet.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">

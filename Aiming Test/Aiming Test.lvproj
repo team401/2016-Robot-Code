@@ -27,19 +27,19 @@
 			<Item Name="FRC Simulated.xml" Type="Document" URL="../../FRC Simulated.xml"/>
 		</Item>
 		<Item Name="Robot Simulation Readme.html" Type="Document" URL="../../Robot Simulation Readme.html"/>
-		<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../../Gunsim Initial Position.vi"/>
-		<Item Name="Gunsim Update Position.vi" Type="VI" URL="../../Gunsim Update Position.vi"/>
-		<Item Name="Gunsim Simulate.vi" Type="VI" URL="../../Gunsim Simulate.vi"/>
-		<Item Name="Gunsim.vi" Type="VI" URL="../../Gunsim.vi"/>
-		<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../../Angle to Encoder Ticks.vi"/>
-		<Item Name="Gunsim Precalc.vi" Type="VI" URL="../../Gunsim Precalc.vi"/>
-		<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../../Gunsim Vision Adapter.vi"/>
+		<Item Name="Gunsim Initial Position.vi" Type="VI" URL="../../Firing Simulation/Gunsim Initial Position.vi"/>
+		<Item Name="Gunsim Update Position.vi" Type="VI" URL="../../Firing Simulation/Gunsim Update Position.vi"/>
+		<Item Name="Gunsim Simulate.vi" Type="VI" URL="../../Firing Simulation/Gunsim Simulate.vi"/>
+		<Item Name="Gunsim.vi" Type="VI" URL="../../Firing Simulation/Gunsim.vi"/>
+		<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../../Firing Simulation/Gunsim Vision Adapter.vi"/>
+		<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../../Firing Code/Angle to Encoder Ticks.vi"/>
+		<Item Name="Gunsim Precalc.vi" Type="VI" URL="../../Firing Simulation/Gunsim Precalc.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
+				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
 				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
 				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
-				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
 				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
 			</Item>
 		</Item>
@@ -131,32 +131,33 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Team Code" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../../Angle to Encoder Ticks.vi"/>
+			<Item Name="Aimbot.vi" Type="VI" URL="../../Firing Code/Aimbot.vi"/>
+			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../../Firing Code/Angle to Encoder Ticks.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../../Begin.vi"/>
+			<Item Name="Bundle.ctl" Type="VI" URL="../../Firing Code/Bundle.ctl"/>
+			<Item Name="Close.vi" Type="VI" URL="../../Firing Code/Close.vi"/>
+			<Item Name="Collect.vi" Type="VI" URL="../../Firing Code/Collect.vi"/>
 			<Item Name="Custom Motor.vi" Type="VI" URL="../../Custom Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../../Custom Tank.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../../Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../../Finish.vi"/>
-			<Item Name="Firing Cluster.ctl" Type="VI" URL="../../Firing Cluster.ctl"/>
+			<Item Name="Get Config.vi" Type="VI" URL="../../Firing Code/Get Config.vi"/>
 			<Item Name="GetVisionFiringBox.vi" Type="VI" URL="../../GetVisionFiringBox.vi"/>
 			<Item Name="Gyro Correction.vi" Type="VI" URL="../../Gyro Correction.vi"/>
+			<Item Name="Manual.vi" Type="VI" URL="../../Firing Code/Manual.vi"/>
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../../Open 6 Motor.vi"/>
+			<Item Name="Open.vi" Type="VI" URL="../../Firing Code/Open.vi"/>
 			<Item Name="ParseVisionData.vi" Type="VI" URL="../../ParseVisionData.vi"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../../Periodic Tasks.vi"/>
+			<Item Name="Read Spreadsheet.vi" Type="VI" URL="../../Firing Code/Read Spreadsheet.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../../Robot Global Data.vi"/>
+			<Item Name="Set Angle.vi" Type="VI" URL="../../Firing Code/Set Angle.vi"/>
+			<Item Name="Shoot(Aimbot).vi" Type="VI" URL="../../Firing Code/Shoot(Aimbot).vi"/>
+			<Item Name="Shoot(Manual).vi" Type="VI" URL="../../Firing Code/Shoot(Manual).vi"/>
+			<Item Name="Shoot.vi" Type="VI" URL="../../Firing Code/Shoot.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../../Vision Processing.vi"/>
-			<Item Name="WheelShooter Aimbot.vi" Type="VI" URL="../../WheelShooter Aimbot.vi"/>
-			<Item Name="WheelShooter Close.vi" Type="VI" URL="../../WheelShooter Close.vi"/>
-			<Item Name="WheelShooter Collect.vi" Type="VI" URL="../../WheelShooter Collect.vi"/>
-			<Item Name="WheelShooter Get Config.vi" Type="VI" URL="../../WheelShooter Get Config.vi"/>
-			<Item Name="WheelShooter Manual.vi" Type="VI" URL="../../WheelShooter Manual.vi"/>
-			<Item Name="WheelShooter Open.vi" Type="VI" URL="../../WheelShooter Open.vi"/>
-			<Item Name="WheelShooter Read Spreadsheet.vi" Type="VI" URL="../../WheelShooter Read Spreadsheet.vi"/>
-			<Item Name="WheelShooter Shoot(Aimbot).vi" Type="VI" URL="../../WheelShooter Shoot(Aimbot).vi"/>
-			<Item Name="WheelShooter Shoot(Manual).vi" Type="VI" URL="../../WheelShooter Shoot(Manual).vi"/>
-			<Item Name="WheelShooter Shoot.vi" Type="VI" URL="../../WheelShooter Shoot.vi"/>
 		</Item>
 		<Item Name="TeleopTest.vi" Type="VI" URL="../TeleopTest.vi"/>
 		<Item Name="BeginTest.vi" Type="VI" URL="../BeginTest.vi"/>
@@ -818,6 +819,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_DigitalInputRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Set.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigPotenNumberTurns.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigPotenNumberTurns.vi"/>
+				<Item Name="WPI_DigitalInputRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Get.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
