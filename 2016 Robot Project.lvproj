@@ -142,6 +142,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
+			<Item Name="DistanceToEncoder.vi" Type="VI" URL="../DistanceToEncoder.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
 			<Item Name="GetVisionFiringBox.vi" Type="VI" URL="../GetVisionFiringBox.vi"/>
 			<Item Name="Gyro Correction.vi" Type="VI" URL="../Gyro Correction.vi"/>
