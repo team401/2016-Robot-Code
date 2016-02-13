@@ -117,14 +117,14 @@ AddOutputFilter chunkFilter
 		<Item Name="Team Code" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="Firing Code" Type="Folder">
-				<Item Name="Aimbot.vi" Type="VI" URL="../Aimbot.vi"/>
+				<Item Name="Aimbot.vi" Type="VI" URL="../Firing Code/Aimbot.vi"/>
 				<Item Name="Bundle.ctl" Type="VI" URL="../Firing Code/Bundle.ctl"/>
 				<Item Name="Close.vi" Type="VI" URL="../Firing Code/Close.vi"/>
 				<Item Name="Collect.vi" Type="VI" URL="../Firing Code/Collect.vi"/>
-				<Item Name="Get Config.vi" Type="VI" URL="../Get Config.vi"/>
+				<Item Name="Get Config.vi" Type="VI" URL="../Firing Code/Get Config.vi"/>
 				<Item Name="Manual.vi" Type="VI" URL="../Firing Code/Manual.vi"/>
 				<Item Name="Open.vi" Type="VI" URL="../Firing Code/Open.vi"/>
-				<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Read Spreadsheet.vi"/>
+				<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Firing Code/Read Spreadsheet.vi"/>
 				<Item Name="Set Angle.vi" Type="VI" URL="../Firing Code/Set Angle.vi"/>
 				<Item Name="Shoot(Aimbot).vi" Type="VI" URL="../Firing Code/Shoot(Aimbot).vi"/>
 				<Item Name="Shoot(Manual).vi" Type="VI" URL="../Firing Code/Shoot(Manual).vi"/>
@@ -833,9 +833,6 @@ AddOutputFilter chunkFilter
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="Get Config.vi" Type="VI" URL="../Firing Code/Get Config.vi"/>
-			<Item Name="Aimbot.vi" Type="VI" URL="../Firing Code/Aimbot.vi"/>
-			<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Firing Code/Read Spreadsheet.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
