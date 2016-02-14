@@ -121,6 +121,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Bundle.ctl" Type="VI" URL="../Firing Code/Bundle.ctl"/>
 				<Item Name="Close.vi" Type="VI" URL="../Firing Code/Close.vi"/>
 				<Item Name="Collect.vi" Type="VI" URL="../Firing Code/Collect.vi"/>
+				<Item Name="Control Process.vi" Type="VI" URL="../Firing Code/Control Process.vi"/>
 				<Item Name="Get Config.vi" Type="VI" URL="../Firing Code/Get Config.vi"/>
 				<Item Name="Manual.vi" Type="VI" URL="../Firing Code/Manual.vi"/>
 				<Item Name="Open.vi" Type="VI" URL="../Firing Code/Open.vi"/>
@@ -128,7 +129,6 @@ AddOutputFilter chunkFilter
 				<Item Name="Safe Angle.vi" Type="VI" URL="../Firing Code/Safe Angle.vi"/>
 				<Item Name="Set Angle.vi" Type="VI" URL="../Firing Code/Set Angle.vi"/>
 				<Item Name="Shoot.vi" Type="VI" URL="../Firing Code/Shoot.vi"/>
-				<Item Name="subcollect.vi" Type="VI" URL="../Firing Code/subcollect.vi"/>
 				<Item Name="Transform Aimbot.vi" Type="VI" URL="../Firing Code/Transform Aimbot.vi"/>
 			</Item>
 			<Item Name="Firing Simulation" Type="Folder">

@@ -153,12 +153,17 @@ AddOutputFilter chunkFilter
 			<Item Name="Read Spreadsheet.vi" Type="VI" URL="../../Firing Code/Read Spreadsheet.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../../Robot Global Data.vi"/>
 			<Item Name="Set Angle.vi" Type="VI" URL="../../Firing Code/Set Angle.vi"/>
-			<Item Name="Shoot(Aimbot).vi" Type="VI" URL="../../Firing Code/Shoot(Aimbot).vi"/>
-			<Item Name="Shoot(Manual).vi" Type="VI" URL="../../Firing Code/Shoot(Manual).vi"/>
 			<Item Name="Shoot.vi" Type="VI" URL="../../Firing Code/Shoot.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../../Vision Processing.vi"/>
 		</Item>
+		<Item Name="Safe Angle.vi" Type="VI" URL="../../Firing Code/Safe Angle.vi"/>
+		<Item Name="subcollect.vi" Type="VI" URL="../../Firing Code/subcollect.vi"/>
+		<Item Name="Transform Aimbot.vi" Type="VI" URL="../../Firing Code/Transform Aimbot.vi"/>
+		<Item Name="DistanceToEncoder.vi" Type="VI" URL="../../DistanceToEncoder.vi"/>
+		<Item Name="Disable.vi" Type="VI" URL="../../Firing Code/Disable.vi"/>
+		<Item Name="Shifting.vi" Type="VI" URL="../../Shifting.vi"/>
+		<Item Name="Shifting Enc to RPM.vi" Type="VI" URL="../../Shifting Enc to RPM.vi"/>
 		<Item Name="TeleopTest.vi" Type="VI" URL="../TeleopTest.vi"/>
 		<Item Name="BeginTest.vi" Type="VI" URL="../BeginTest.vi"/>
 		<Item Name="Periodic Tasks Test.vi" Type="VI" URL="../Periodic Tasks Test.vi"/>
@@ -820,6 +825,10 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEncoderCodesPerLine.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigPotenNumberTurns.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigPotenNumberTurns.vi"/>
 				<Item Name="WPI_DigitalInputRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Get.vi"/>
+				<Item Name="WPI_DigitalInputGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputGetValue.vi"/>
+				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
+				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
+				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
