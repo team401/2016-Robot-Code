@@ -103,12 +103,35 @@ while(True):
                         cx = int(M['m10']/M['m00'])
                         cy = int(M['m01']/M['m00'])
                         
+                        ellipse = cv2.fitEllipse(cnt)
+                        image = cv2.ellipse(image,ellipse,(0,255,0),2)
+                        (x,y),(MA,ma),angle = cv2.fitEllipse(cnt)
+                        print(angle)
+                            
+                        
+                        cnt = contours[0]
+                        hull = cv2.convexHull(cnt)
+                        epsilon = 0.01*cv2.arcLength(cnt,True)
+                        approx = cv2.approxPolyDP(cnt,epsilon,True)
+                        if angle >= 90:
+                            (x1, y1) = approx[1][0]
+                            (x2, y2) = approx[2][0]
+                        elif angle < 90:
+                            (x1, y1) = approx[6][0]
+                            (x2, y2) = approx[7][0]
+                            
+
+                        cv2.drawContours(image,[approx],0,(0,255,0),1)
+                        
+                        pixelWidthSquared = (pow(x2-x1,2) + pow(y2-y1,2))
+                        pixelWidth = pow(pixelWidthSquared,0.5)
+                        
+                        
                         # Draws the countours and a circle around the goal
                         image = cv2.drawContours(res,[box],0,(255,0,0),2)
                         image = cv2.circle(res,(cx,cy), 3, (0,0,255), -1)
                         
                         # Used to find pixel width of the object
-                        pixelWidth = (rect[1][0])
                         
                         # Only draws around the the shape with the biggest area
 #                        image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
@@ -116,7 +139,9 @@ while(True):
                         # Finds distance
                         distance = ((20 * focalLength) / (pixelWidth))
                         # Removes noise by filtering out things with a volume of less than 20
-                        print(pixelWidth)
+#                        print(pixelWidth)
+                        image = cv2.circle(res,(x1,y1), 3, (0,0,255), -1)
+                        image = cv2.circle(res,(x2,y2), 3, (0,0,255), -1)
                         if distance <= 10:
                             pass
                         else:

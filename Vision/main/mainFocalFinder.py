@@ -5,7 +5,6 @@ import glob
 lower = np.array([70,100,225])
 upper = np.array([95,255,255])
 
-
 distance = (178.5) # 8-120.6 10-140.46 12-161.45 14-183.18
 #8-117
 #10 -136
@@ -66,7 +65,7 @@ for fname in images:
         res = cv2.bitwise_and(dst,dst, mask= mask)
         imgray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
         ret,thresh = cv2.threshold(imgray,127,255,0)
-        image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+        image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         try:
             # Sets max area
             maxArea = -1
@@ -86,21 +85,23 @@ for fname in images:
                         cx = int(M['m10']/M['m00'])
                         cy = int(M['m01']/M['m00'])
                         
-                        image = cv2.drawContours(res,[box],0,(255,0,0),2)
-                        image = cv2.circle(res,(cx,cy), 3, (0,0,255), -1)
+#                        image = cv2.drawContours(res,[box],0,(255,0,0),2)
+#                        image = cv2.circle(res,(cx,cy), 3, (0,0,255), -1)
                         # Used to find pixel width of the object
-    
                         pixelWidth = (rect[1][0])
                         
                         # Only draws around the the shape with the biggest area
-                        image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
+#                        cnt = contours[4]
+                        
+                        image = cv2.drawContours(res, cont, -5, (0,0,255), 3)
+
                         
                         # Finds distance
                         focalLength = ((pixelWidth * distance) / 20)
                         print(pixelWidth)
     #                    print('fname is: ' + str(fname))
                         
-                        if distance <= 1:
+                        if distance <= 0:
                             pass
                         else:
                             distanceAway = (distance)
