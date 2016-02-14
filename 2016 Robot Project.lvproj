@@ -125,8 +125,10 @@ AddOutputFilter chunkFilter
 				<Item Name="Manual.vi" Type="VI" URL="../Firing Code/Manual.vi"/>
 				<Item Name="Open.vi" Type="VI" URL="../Firing Code/Open.vi"/>
 				<Item Name="Read Spreadsheet.vi" Type="VI" URL="../Firing Code/Read Spreadsheet.vi"/>
+				<Item Name="Safe Angle.vi" Type="VI" URL="../Firing Code/Safe Angle.vi"/>
 				<Item Name="Set Angle.vi" Type="VI" URL="../Firing Code/Set Angle.vi"/>
 				<Item Name="Shoot.vi" Type="VI" URL="../Firing Code/Shoot.vi"/>
+				<Item Name="subcollect.vi" Type="VI" URL="../Firing Code/subcollect.vi"/>
 				<Item Name="Transform Aimbot.vi" Type="VI" URL="../Firing Code/Transform Aimbot.vi"/>
 			</Item>
 			<Item Name="Firing Simulation" Type="Folder">
