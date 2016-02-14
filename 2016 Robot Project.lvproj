@@ -141,25 +141,26 @@ AddOutputFilter chunkFilter
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Firing Code/Angle to Encoder Ticks.vi"/>
 			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
-			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
 			<Item Name="DistanceToEncoder.vi" Type="VI" URL="../DistanceToEncoder.vi"/>
-			<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
 			<Item Name="GetVisionFiringBox.vi" Type="VI" URL="../GetVisionFiringBox.vi"/>
 			<Item Name="Gyro Correction.vi" Type="VI" URL="../Gyro Correction.vi"/>
 			<Item Name="Open 6 Motor.vi" Type="VI" URL="../Open 6 Motor.vi"/>
 			<Item Name="ParseVisionData.vi" Type="VI" URL="../ParseVisionData.vi"/>
-			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
-			<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
 			<Item Name="Shifting button.vi" Type="VI" URL="../Shifting button.vi"/>
 			<Item Name="Shifting Enc to RPM.vi" Type="VI" URL="../Shifting Enc to RPM.vi"/>
 			<Item Name="Shifting.vi" Type="VI" URL="../Shifting.vi"/>
-			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
-			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
+		<Item Name="Periodic Tasks.vi" Type="VI" URL="../Periodic Tasks.vi"/>
+		<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
+		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
+		<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
+		<Item Name="Robot Global Data.vi" Type="VI" URL="../Robot Global Data.vi"/>
+		<Item Name="Finish.vi" Type="VI" URL="../Finish.vi"/>
 		<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 		<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
+		<Item Name="Disable.vi" Type="VI" URL="../Firing Code/Disable.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -808,7 +809,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_AnalogChannelGetAverageVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelGetAverageVoltage.vi"/>
 				<Item Name="WPI_PotentiometerGetNormalized.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerGetNormalized.vi"/>
 				<Item Name="WPI_PotentiometerClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Potentiometer/WPI_PotentiometerClose.vi"/>
-				<Item Name="WPI_DigitalInputRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Set.vi"/>
 				<Item Name="WPI_DigitalInputRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Get.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigPotenNumberTurns.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigPotenNumberTurns.vi"/>
 				<Item Name="WPI_SolenoidSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyTest.vi"/>
@@ -822,6 +822,11 @@ AddOutputFilter chunkFilter
 				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
 				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
 				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
+				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
+				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
+				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
+				<Item Name="WPI_DigitalInputGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputGetValue.vi"/>
+				<Item Name="WPI_DigitalInputRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputRefNum Registry Set.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
