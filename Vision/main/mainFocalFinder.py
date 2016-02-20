@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import glob
 
-lower = np.array([70,100,225])
+lower = np.array([70,100,215])
 upper = np.array([95,255,255])
 
 distance = (178.5) # 8-120.6 10-140.46 12-161.45 14-183.18

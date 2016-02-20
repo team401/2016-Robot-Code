@@ -3,8 +3,8 @@ import cv2
 import urllib.request
 
 # Sets the HSV range for the Retro-Reflective Tape
-lower = np.array([70,100,225])
-upper = np.array([95,255,255])
+lower = np.array([70,95,220])
+upper = np.array([100,255,255])
 
 # Initializes distance, focalLength, and the count
 distance = 0 
@@ -48,112 +48,131 @@ if ret == True:
 while(True):
     # When nothing is seen there is a divide by zero error, so this skips over that
     try:
-        # For every ~10th frame
-        if count >= (10):
-            # Takes frames from the camera that we can use
-            bytes+=stream.read(16384)
-            a = bytes.find(b'\xff\xd8')
-            b = bytes.find(b'\xff\xd9')
-            if a!=-1 and b!=-1:
-                jpg = bytes[a:b+2]
-                bytes= bytes[b+2:]
-                frame = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.IMREAD_COLOR)
-                img = frame
+        # Takes frames from the camera that we can use
+        bytes+=stream.read(16384)
+        a = bytes.find(b'\xff\xd8')
+        b = bytes.find(b'\xff\xd9')
+        if a!=-1 and b!=-1:
+            jpg = bytes[a:b+2]
+            bytes= bytes[b+2:]
+            frame = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.IMREAD_COLOR)
+            img = frame
 
-            h,  w = img.shape[:2]
-            newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),1,(w,h))
+        h,  w = img.shape[:2]
+        newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),1,(w,h))
+        
+        # undistorts
+        dst = cv2.undistort(img, mtx, dist, None, newcameramtx)
+         
+        # crop the image and converts it to HSV
+        x,y,w,h = roi
+        dst = dst[y:y+h, x:x+w]
+        hsv = cv2.cvtColor(dst, cv2.COLOR_BGR2HSV)
+        
+        # Creates the mask for the Retro-Reflective tape
+        mask = cv2.inRange(hsv, lower, upper)
+        
+        # Layers the mask onto the frame
+        res = cv2.bitwise_and(dst,dst, mask= mask)
+        imgray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
+        ret,thresh = cv2.threshold(imgray,127,255,0)
+        image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+        count = 1
+        
+        
+        # Sets max area
+        maxArea = 0
+        thresholdArea = 500
+        for cnt in contours:
+            area = cv2.contourArea(cnt)
             
-            # undistorts
-            dst = cv2.undistort(img, mtx, dist, None, newcameramtx)
-             
-            # crop the image and converts it to HSV
-            x,y,w,h = roi
-            dst = dst[y:y+h, x:x+w]
-            hsv = cv2.cvtColor(dst, cv2.COLOR_BGR2HSV)
-            
-            # Creates the mask for the Retro-Reflective tape
-            mask = cv2.inRange(hsv, lower, upper)
-            
-            # Layers the mask onto the frame
-            res = cv2.bitwise_and(dst,dst, mask= mask)
-            imgray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
-            ret,thresh = cv2.threshold(imgray,127,255,0)
-            image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
-            count = 1
-            
-            
-            # Sets max area
-            maxArea = 0
-            thresholdArea = 500
-            for cnt in contours:
-                area = cv2.contourArea(cnt)
+            # Only find the biggest goal that is seen
+            if area > thresholdArea:
+                if area > maxArea:
+                    # Finds max area of masked shapes
+                    maxArea = area
+                    cntIndex = contours.index(cnt)
+                    
+        rect = cv2.minAreaRect(contours[cntIndex])
+        box = cv2.boxPoints(rect)
+        box = np.int0(box)
+        
+        # Finds countours and center of the goal
+        M = cv2.moments(contours[cntIndex])
+        cx = int(M['m10']/M['m00'])
+        cy = int(M['m01']/M['m00'])
+        
+        ellipse = cv2.fitEllipse(contours[cntIndex])
+        image = cv2.ellipse(res,ellipse,(0,255,0),0)
+        (x,y),(MA,ma),angle = cv2.fitEllipse(contours[cntIndex])
+
+
+        epsilon = 0.01*cv2.arcLength(contours[cntIndex],True)
+        approx = cv2.approxPolyDP(contours[cntIndex],epsilon,True)
+        if angle >= 90:
+            (x1, y1) = approx[1][0] # Approx 1,2 is bottom width
+            (x2, y2) = approx[2][0]
+            (sx1,sy1) = approx[0][0] # Approx 0,1 is side width 1
+            (sx2,sy2) = approx[3][0] # Approx 2,3 is side width 2
+        elif angle < 90:
+            (x1, y1) = approx[6][0] # Approx 6,7 is bottom width
+            (x2, y2) = approx[7][0]
+            (sx1,sy1) = approx[5][0] # Approx 5,6 is side width 1
+            (sx2,sy2) = approx[0][0] # Approx 7, 0 is side width 2                            
+
+        cv2.drawContours(image,[approx],0,(0,0,255),1)
+        
+        bottomWidthSquared = (pow(x2-x1,2) + pow(y2-y1,2))
+        side1Squared = (pow(sx1-x1,2) + pow(sy1-y1,2))
+        side2Squared = (pow(sx2-x2,2) + pow(sy2-y2,2))
+        
+        bottomWidth = pow(bottomWidthSquared,0.5)
+        side1 = pow(side1Squared,0.5)
+        side2 = pow(side2Squared,0.5)
+        
                 
-                # Only find the biggest goal that is seen
-                if area > thresholdArea:
-                    if area > maxArea:
-                        # Finds max area of masked shapes
-                        maxArea = area
-                        rect = cv2.minAreaRect(cnt)
-                        box = cv2.boxPoints(rect)
-                        box = np.int0(box)
-                        
-                        # Finds countours and center of the goal
-                        cont = contours[0]
-                        M = cv2.moments(cont)
-                        cx = int(M['m10']/M['m00'])
-                        cy = int(M['m01']/M['m00'])
-                        
-                        ellipse = cv2.fitEllipse(cnt)
-                        image = cv2.ellipse(image,ellipse,(0,255,0),2)
-                        (x,y),(MA,ma),angle = cv2.fitEllipse(cnt)
-                        print(angle)
-                            
-                        
-                        cnt = contours[0]
-                        hull = cv2.convexHull(cnt)
-                        epsilon = 0.01*cv2.arcLength(cnt,True)
-                        approx = cv2.approxPolyDP(cnt,epsilon,True)
-                        if angle >= 90:
-                            (x1, y1) = approx[1][0]
-                            (x2, y2) = approx[2][0]
-                        elif angle < 90:
-                            (x1, y1) = approx[6][0]
-                            (x2, y2) = approx[7][0]
-                            
+                
+        if(side1 >= side2):
+            
+            if(side1/side2 >= 1.25):
+                distance = ((14 * focalLength) / side1)
+                print('side')
+            else:
+                distance = ((20 * focalLength / bottomWidth))
+                print('bottom')
+        else:
+            
+            if(side2/side1 >= 1.25):
+                distance = ((14 * focalLength) / side2)
+                print('side')
+            else:
+                distance = ((20 * focalLength / bottomWidth))
+                print('bottom')
+        # Draws the countours and a circle around the goal
 
-                        cv2.drawContours(image,[approx],0,(0,255,0),1)
-                        
-                        pixelWidthSquared = (pow(x2-x1,2) + pow(y2-y1,2))
-                        pixelWidth = pow(pixelWidthSquared,0.5)
-                        
-                        
-                        # Draws the countours and a circle around the goal
-                        image = cv2.drawContours(res,[box],0,(255,0,0),2)
-                        image = cv2.circle(res,(cx,cy), 3, (0,0,255), -1)
-                        
-                        # Used to find pixel width of the object
-                        
-                        # Only draws around the the shape with the biggest area
-#                        image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
-                        
-                        # Finds distance
-                        distance = ((20 * focalLength) / (pixelWidth))
-                        # Removes noise by filtering out things with a volume of less than 20
+        image = cv2.circle(image,(cx,cy), 3, (0,0,255), -1)
+
+        
+        # Removes noise by filtering out things with a volume of less than 20
 #                        print(pixelWidth)
-                        image = cv2.circle(res,(x1,y1), 3, (0,0,255), -1)
-                        image = cv2.circle(res,(x2,y2), 3, (0,0,255), -1)
-                        if distance <= 10:
-                            pass
-                        else:
-                            # displays the Angle, Distance, and Focal Length
-                            font = cv2.FONT_HERSHEY_SIMPLEX
-                            cv2.putText(image,str(round(distance,2)),(500,450), font, 1,(0,0,255),2)
+        image = cv2.circle(image,(x1,y1), 3, (0,100,255), -1)
+        image = cv2.circle(image,(x2,y2), 3, (0,0,255), -1)
+        image = cv2.circle(image,(sx1,sy1), 3, (255,0,100), -1)
+        image = cv2.circle(image,(sx2,sy2), 3, (0,255,0), -1)                        
+        if distance <= 10:
+            pass
+        else:
+            # displays the Angle, Distance, and Focal Length
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            cv2.putText(image,str(round(distance,2)),(500,450), font, 1,(0,0,255),2)
 #                            cv2.putText(image,str(round(angle,2)),(500,650), font, 1,(255,0,0),2)
-                            cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
-                
+            cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
         # Shows the image and adds one to the count
-        count = count + 1
         cv2.imshow('img',image) 
+#        cv2.imshow('thresh',thresh)
+#        cv2.imshow('res',res)
+#        cv2.imshow('imggray',imgray)
+#        cv2.imshow('frame',frame)
 
     except:
         pass        

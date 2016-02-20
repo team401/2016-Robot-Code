@@ -1,10 +1,9 @@
 import cv2
 import numpy as np
 import urllib.request
-from time import sleep
 
 # Sets up the webcam and connects to it and initalizes a variable we use for it
-stream=urllib.request.urlopen('http://192.168.0.90/mjpg/video.mjpg')
+stream=urllib.request.urlopen('http://192.168.0.91/mjpg/video.mjpg')
 bytes=b''
 
 # Define the codec and create VideoWriter object
@@ -21,10 +20,10 @@ while True:
         bytes= bytes[b+2:]
         frame = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.IMREAD_COLOR)
        
-        out.write(frame)
+#        out.write(frame)
        # Displays the final product
         cv2.imshow('frame',frame)
-     
+
      # Hit esc to kill
         if cv2.waitKey(1) ==27:
             exit(0)

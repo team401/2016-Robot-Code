@@ -1,7 +1,6 @@
 import numpy as np
 import cv2
 import urllib.request
-#import serial
 
 # Sets the HSV range for the Retro-Reflective Tape
 lower = np.array([70,95,220])
@@ -12,12 +11,12 @@ distance = 0
 focalLength = 730.5
 count = 10
 
-goal = False
-#ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=0) # Opens the Serial port
-
 # Sets up the webcam and connects to it and initalizes a variable we use for it
-stream=urllib.request.urlopen('http://192.168.0.90/mjpg/video.mjpg')
-bytes=b''
+leftStream = urllib.request.urlopen('http://192.168.0.90/mjpg/video.mjpg')
+rightStream = urllib.request.urlopen('http://192.168.0.91/mjpg/video.mjpg')
+ 
+leftBytes = b''
+rightBytes = b''
 
 # termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
@@ -48,8 +47,7 @@ if ret == True:
     ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
     dist = np.array([ -5.08941357e-01,-2.73762518e-02,2.94200341e-03,1.50764126e-03,2.12977986e+00])
 
-    
-while(True):
+def camera(stream, bytes):
     # When nothing is seen there is a divide by zero error, so this skips over that
     try:
         # Takes frames from the camera that we can use
@@ -81,7 +79,6 @@ while(True):
         imgray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
         ret,thresh = cv2.threshold(imgray,127,255,0)
         image, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
-        count = 1
         
         
         # Sets max area
@@ -140,28 +137,54 @@ while(True):
             
             if(side1/side2 >= 1.25):
                 distance = ((14 * focalLength) / side1)
-                print('side')
+#                    print('side')
             else:
                 distance = ((20 * focalLength / bottomWidth))
-                print('bottom')
+#                    print('bottom')
         else:
             
             if(side2/side1 >= 1.25):
                 distance = ((14 * focalLength) / side2)
-                print('side')
+#                    print('side')
             else:
                 distance = ((20 * focalLength / bottomWidth))
-                print('bottom')
+#                    print('bottom')
+        # Draws the countours and a circle around the goal
+
+        image = cv2.circle(image,(cx,cy), 3, (0,0,255), -1)
 
         
         # Removes noise by filtering out things with a volume of less than 20
-                      
+#                        print(pixelWidth)
+        image = cv2.circle(image,(x1,y1), 3, (0,100,255), -1)
+        image = cv2.circle(image,(x2,y2), 3, (0,0,255), -1)
+        image = cv2.circle(image,(sx1,sy1), 3, (255,0,100), -1)
+        image = cv2.circle(image,(sx2,sy2), 3, (0,255,0), -1)                        
         if distance <= 10:
             pass
-            
-#        packet = '{"distance":"' + str(distance) + '","angle":"' + str(angle) + '","x":"' + str(cx) + '","y":"' + str(cy) + '","goal":"' + str(goal) + '"}' + '\n'
-#        ser.write(packet.encode())
+        else:
+            # displays the Angle, Distance, and Focal Length
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            cv2.putText(image,str(round(distance,2)),(500,450), font, 1,(0,0,255),2)
+#           cv2.putText(image,str(round(angle,2)),(500,650), font, 1,(255,0,0),2)
+            cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
+        # Shows the image and adds one to the count
+    except:
+        pass
+    return image
 
+
+while(True):
+    try:
+        leftImage = camera(leftStream, leftBytes)
+        cv2.imshow('left', leftImage)
+        rightImage = camera(rightStream, rightBytes)
+        cv2.imshow('right', rightImage)
 
     except:
         pass
+    
+    if cv2.waitKey(1) & 0xFF == 27: # esc is the kill key
+        break
+    
+cv2.destroyAllWindows()
