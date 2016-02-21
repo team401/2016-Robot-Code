@@ -1,7 +1,9 @@
 import serial
+import io
 
 goal = False
-ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=0) # Opens the Serial port
+ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=0) # Opens the Serial port
+sio = io.TextIOWrapper(io.BufferedRWPair(ser, ser))
 
 import numpy as np
 import cv2
@@ -51,6 +53,8 @@ if ret == True:
 
     
 while(True):
+    
+    line = sio.readline()
     # When nothing is seen there is a divide by zero error, so this skips over that
     try:
         # Takes frames from the camera that we can use
@@ -88,10 +92,6 @@ while(True):
         # Sets max area
         maxArea = 0
         thresholdArea = 500
-        if len(contours) == 0:
-            goal = False
-        else:
-            goal = True
             
             
         for cnt in contours:
@@ -182,11 +182,23 @@ while(True):
             cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
         # Shows the image and adds one to the count
         cv2.imshow('img',image) 
-        packet = '{"distance":"' + str(distance) + '","angle":"' + str(angle) + '","x":"' + str(cx) + '","y":"' + str(cy) + '","goal":"' + str(goal) + '"}' + '\n'
-        ser.write(packet.encode())
+        
+        if(300 < distance or distance < 50):
+            distance = 0
+            angle = 0
+            cx = 0
+            cy = 0
+            goal = False
+        else:
+            goal = True
+            
     except:
         pass        
 
+    if(line == 's'):
+        packet = '{"distance":"' + str(distance) + '","angle":"' + str(angle) + '","x":"' + str(cx) + '","y":"' + str(cy) + '","goal":"' + str(goal) + '"}' + '\n'
+        ser.write(packet.encode())
+        
     if cv2.waitKey(1) & 0xFF == 27: # esc is the kill key
             break
 

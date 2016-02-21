@@ -178,7 +178,7 @@ def capture(stream, bytes, dist, side):
             image = cv2.circle(image,(sx1,sy1), 3, (255,0,100), -1)
             image = cv2.circle(image,(sx2,sy2), 3, (0,255,0), -1)           
 
-            dist[0] = distance       
+            dist[0] = distance             
             if distance <= 10:
                 pass
             else:

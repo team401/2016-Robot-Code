@@ -169,10 +169,7 @@ while(True):
             cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
         # Shows the image and adds one to the count
         cv2.imshow('img',image) 
-#        cv2.imshow('thresh',thresh)
-#        cv2.imshow('res',res)
-#        cv2.imshow('imggray',imgray)
-#        cv2.imshow('frame',frame)
+
 
     except:
         pass        
