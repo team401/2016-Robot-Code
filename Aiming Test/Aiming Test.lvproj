@@ -168,7 +168,6 @@ AddOutputFilter chunkFilter
 		<Item Name="Vision Distance.vi" Type="VI" URL="../../Firing Code/Vision Distance.vi"/>
 		<Item Name="ZieglerNichols.vi" Type="VI" URL="../ZieglerNichols.vi"/>
 		<Item Name="DisabledTest.vi" Type="VI" URL="../DisabledTest.vi"/>
-		<Item Name="Untitled 1 (SubVI).vi" Type="VI" URL="../../../Untitled 1 (SubVI).vi"/>
 		<Item Name="HallSafety.vi" Type="VI" URL="../../Firing Code/HallSafety.vi"/>
 		<Item Name="Zero Dart.vi" Type="VI" URL="../../Firing Code/Zero Dart.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -837,6 +836,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Gunsim Simulate.vi" Type="VI" URL="../../Firing Simulation/Gunsim Simulate.vi"/>
 			<Item Name="Gunsim Precalc.vi" Type="VI" URL="../../Firing Simulation/Gunsim Precalc.vi"/>
 			<Item Name="Gunsim.vi" Type="VI" URL="../../Firing Simulation/Gunsim.vi"/>
+			<Item Name="Custom Get Refnum.vi" Type="VI" URL="../../Custom Get Refnum.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
