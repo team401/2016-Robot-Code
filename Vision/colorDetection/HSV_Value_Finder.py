@@ -1,12 +1,13 @@
 import cv2
 import numpy as np
-import urllib.request
+import requests
 
 # Starts the webcam
 
 # Sets up the webcam and connects to it and initalizes a variable we use for it
-stream=urllib.request.urlopen('http://192.168.0.90/mjpg/video.mjpg')
-bytes=b''
+url = 'http://192.168.0.90/mjpg/video.mjpg'
+stream = requests.get(url, stream=True)
+bytes = b''
 #cap = cv2.VideoCapture(0)
 
 def pick_color(event,x,y,flags,param):
@@ -18,7 +19,7 @@ def pick_color(event,x,y,flags,param):
 
 while(1):
         # Takes frames from the camera that we can use
-    bytes+=stream.read(16384)
+    bytes+=stream.raw.read(16384)
     a = bytes.find(b'\xff\xd8')
     b = bytes.find(b'\xff\xd9')
     if a!=-1 and b!=-1:
