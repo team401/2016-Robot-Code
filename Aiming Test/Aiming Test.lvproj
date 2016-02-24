@@ -162,8 +162,8 @@ AddOutputFilter chunkFilter
 		<Item Name="DistanceToEncoder.vi" Type="VI" URL="../../DistanceToEncoder.vi"/>
 		<Item Name="Disable.vi" Type="VI" URL="../../Firing Code/Disable.vi"/>
 		<Item Name="TeleopTest.vi" Type="VI" URL="../TeleopTest.vi"/>
-		<Item Name="BeginTest.vi" Type="VI" URL="../BeginTest.vi"/>
 		<Item Name="Periodic Tasks Test.vi" Type="VI" URL="../Periodic Tasks Test.vi"/>
+		<Item Name="BeginTest.vi" Type="VI" URL="../BeginTest.vi"/>
 		<Item Name="Robot MainTest.vi" Type="VI" URL="../Robot MainTest.vi"/>
 		<Item Name="Vision Distance.vi" Type="VI" URL="../../Firing Code/Vision Distance.vi"/>
 		<Item Name="ZieglerNichols.vi" Type="VI" URL="../ZieglerNichols.vi"/>
