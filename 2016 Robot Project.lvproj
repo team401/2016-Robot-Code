@@ -826,6 +826,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Custom Get Refnum.vi" Type="VI" URL="../Custom Get Refnum.vi"/>
 			<Item Name="Custom Arcade.vi" Type="VI" URL="../Custom Arcade.vi"/>
 			<Item Name="Toggle.vi" Type="VI" URL="../Toggle.vi"/>
+			<Item Name="Tank Arcade Control.vi" Type="VI" URL="../Tank Arcade Control.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
