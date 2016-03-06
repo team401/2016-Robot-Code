@@ -141,6 +141,9 @@ AddOutputFilter chunkFilter
 				<Item Name="Gunsim Vision Adapter.vi" Type="VI" URL="../Firing Simulation/Gunsim Vision Adapter.vi"/>
 				<Item Name="Gunsim.vi" Type="VI" URL="../Firing Simulation/Gunsim.vi"/>
 			</Item>
+			<Item Name="A Alignment.vi" Type="VI" URL="../A Alignment.vi"/>
+			<Item Name="A Calibrate Pot.vi" Type="VI" URL="../A Calibrate Pot.vi"/>
+			<Item Name="A Distance to Angle.vi" Type="VI" URL="../A Distance to Angle.vi"/>
 			<Item Name="Angle to Encoder Ticks.vi" Type="VI" URL="../Firing Code/Angle to Encoder Ticks.vi"/>
 			<Item Name="Custom Motor.vi" Type="VI" URL="../Custom Motor.vi"/>
 			<Item Name="Custom Tank.vi" Type="VI" URL="../Custom Tank.vi"/>
