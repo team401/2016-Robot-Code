@@ -163,9 +163,6 @@ AddOutputFilter chunkFilter
 		<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 		<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
-		<Item Name="A Distance to Angle.vi" Type="VI" URL="../A Distance to Angle.vi"/>
-		<Item Name="A Calibrate Pot.vi" Type="VI" URL="../A Calibrate Pot.vi"/>
-		<Item Name="A Alignment.vi" Type="VI" URL="../A Alignment.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
