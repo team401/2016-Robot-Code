@@ -166,6 +166,9 @@ AddOutputFilter chunkFilter
 		<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 		<Item Name="XAVIER AUTO.vi" Type="VI" URL="../XAVIER AUTO.vi"/>
+		<Item Name="B Move Dart.vi" Type="VI" URL="../B Move Dart.vi"/>
+		<Item Name="B Drive Distance.vi" Type="VI" URL="../B Drive Distance.vi"/>
+		<Item Name="B Turn.vi" Type="VI" URL="../B Turn.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -789,7 +792,6 @@ AddOutputFilter chunkFilter
 			<Item Name="A Auto Aim.vi" Type="VI" URL="../A Auto Aim.vi"/>
 			<Item Name="A Inches to Potentiometer.vi" Type="VI" URL="../Firing Code/A Inches to Potentiometer.vi"/>
 			<Item Name="Custom Gyro Drive.vi" Type="VI" URL="../Custom Gyro Drive.vi"/>
-			<Item Name="Original Autonomous.vi" Type="VI" URL="../Original Autonomous.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
