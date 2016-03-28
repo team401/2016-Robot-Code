@@ -165,8 +165,8 @@ while(True):
             # displays the Angle, Distance, and Focal Length
             font = cv2.FONT_HERSHEY_SIMPLEX
             cv2.putText(image,str(round(distance,2)),(500,450), font, 1,(0,0,255),2)
-#                            cv2.putText(image,str(round(angle,2)),(500,650), font, 1,(255,0,0),2)
-            cv2.putText(image,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
+            cv2.putText(image,str(round(angle,2)),(500,650), font, 1,(255,0,0),2)
+            cv2.putText(image,str(round(currentColor,2)),(30,450), font, 1,(colorValue),2)
         # Shows the image and adds one to the count
         cv2.imshow('img',image) 
 

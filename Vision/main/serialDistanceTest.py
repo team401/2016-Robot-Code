@@ -28,7 +28,7 @@ dist = np.array([ -5.08941357e-01,-2.73762518e-02,2.94200341e-03,1.50764126e-03,
 # Sets up the webcam and connects to it and initalizes a variable we use for it
 while(True):
     try:
-        url = 'http://192.168.0.90/mjpg/video.mjpg'
+        url = 'http://10.4.1.19/mjpg/video.mjpg'
         stream = requests.get(url, stream=True)
         bytes = b''
         break
@@ -43,7 +43,7 @@ while(True):
     
     #Read in serial lines if any are available.
     line = sio.readline()
-    
+
     # When nothing is seen there is a divide by zero error, so this skips over that
     try:
         # Takes frames from the camera that we can use
@@ -56,6 +56,7 @@ while(True):
             frame = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.IMREAD_COLOR)
             img = frame
         h,  w = img.shape[:2]
+        
         newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),1,(w,h))
         
         #undistorts
@@ -65,7 +66,7 @@ while(True):
         x,y,w,h = roi
         dst = dst[y:y+h, x:x+w]
         hsv = cv2.cvtColor(dst, cv2.COLOR_BGR2HSV)
-
+        
         # Creates the mask for the Retro-Reflective tape
         mask = cv2.inRange(hsv, lower, upper)
         
@@ -81,7 +82,7 @@ while(True):
         # Sets max area
         maxArea = 0
         thresholdArea = 500
-
+        
         for cnt in contours:
             area = cv2.contourArea(cnt)
             # Only find the biggest goal that is seen
@@ -101,7 +102,7 @@ while(True):
         ellipse = cv2.fitEllipse(contours[cntIndex])
         image = cv2.ellipse(res,ellipse,(0,255,0),0)
         (x,y),(MA,ma),angle = cv2.fitEllipse(contours[cntIndex])
-
+        print 'here'
         
         epsilon = 0.01*cv2.arcLength(contours[cntIndex],True)
         approx = cv2.approxPolyDP(contours[cntIndex],epsilon,True)
@@ -163,7 +164,8 @@ while(True):
             cv2.putText(res,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
          
         #should be image here, switched to res for debug
-#        cv2.imshow('img',res) 
+        cv2.imshow('img',res) 
+                    
         
         if(300 < distance or distance < 50):
             distance = 0
@@ -172,12 +174,10 @@ while(True):
             cy = 0
             goal = False
         else:
-            goal = True
-            
-    except Exception as e:
-        print e
+            goal = True           
+    except:
         pass        
-
+    print distance
     if(line == 's'):
         packet = '{"distance":"' + str(distance) + '","angle":"' + str(angle) + '","x":"' + str(cx) + '","y":"' + str(cy) + '","goal":"' + str(goal) + '"}' + '\n'
         ser.write(packet.encode())

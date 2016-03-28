@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 
+focalLength = 222.5
+distance = 0
+
 # Creates two different kernels
 kernel = np.ones((10,10),np.uint8)
 kernel2 = np.ones((25,25),np.uint8)
@@ -39,7 +42,7 @@ def create_circle(thresh,cnt,cx,cy):
     center = (int(x),int(y))
     radius = int(radius)
     thresh = cv2.circle(thresh,center,radius,(0,255,0),2)
-    return thresh
+    return radius, thresh
     
 def create_ellipse(thresh,cnt):
     ellipse = cv2.fitEllipse(cnt)
@@ -89,14 +92,15 @@ while(1):
     try:    
         if s == 0:
             # Range for the Blue Frisbee
-            lower = np.array([110,100,90])
-            upper = np.array([130,210,200])
-            thresh = create_circle(thresh,cnt,cx,cy)
+            lower = np.array([5,200,200])
+            upper = np.array([20,255,255])
+            radius, thresh = create_circle(thresh,cnt,cx,cy)
+            distance = ((3.5 * focalLength / radius))
 #            thresh = create_ellipse(thresh,cnt)
         elif s == 1:
             # Range for the Red Frisbee
-            lower = np.array([0,145,125])
-            upper = np.array([15,200,200])
+            lower = np.array([5,200,200])
+            upper = np.array([20,255,255])
             thresh = create_circle(thresh,cnt,cx,cy)
             thresh = create_ellipse(thresh,cnt)
         elif s == 2:
@@ -106,6 +110,16 @@ while(1):
             thresh = create_rectangle(thresh,cnt,cx,cy)
     except:
         pass
+    
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    cv2.putText(thresh,str(round(distance,2)),(500,450), font, 1,(0,0,255),2)
+    cv2.putText(thresh,str(round(focalLength,2)),(30,450), font, 1,(0,255,0),2)
+        
+#    if(distance < 12.00):
+#        focalLength = (focalLength + 0.01)
+#    if(distance > 12.01):
+#        focalLength = (focalLength - 0.01)
+    
     # Displays the masked image and the original
     cv2.imshow('image', thresh)
     cv2.imshow('original', frame)

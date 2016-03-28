@@ -4,7 +4,7 @@ import glob
 
 lower = np.array([70,100,225])
 upper = np.array([95,255,255])
-distance = 171 #225 171
+distance = (8 * 12) # I know the feet away and im bad at math so
 focalLength = 0
 
 # termination criteria
@@ -38,7 +38,7 @@ for fname in images:
         ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
         dist = np.array([ -5.08941357e-01,-2.73762518e-02,2.94200341e-03,1.50764126e-03,2.12977986e+00])
 
-        img = cv2.imread('../images/distanceTest/test171.png')
+        img = cv2.imread('../images/distanceTest/test8.png')
         h,  w = img.shape[:2]
         newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),1,(w,h))
         
@@ -89,11 +89,10 @@ for fname in images:
                         # Only draws around the the shape with the biggest area
                         image = cv2.drawContours(image, cnt, -1, (0,0,255), 3)
                         
-                        # Finds distance
-#                        distance = ((20 * focalLength) / (pixelWidth))
+                        # Finds the focal Length
                         focalLength = ((pixelWidth * distance) / 20)
                         print(focalLength)
-    #                    print('fname is: ' + str(fname))
+
                         
                         if distance <= 1:
                             pass
