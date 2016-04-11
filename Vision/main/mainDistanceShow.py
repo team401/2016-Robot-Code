@@ -3,7 +3,7 @@ import cv2
 import urllib.request
 
 # Sets the HSV range for the Retro-Reflective Tape
-lower = np.array([70,95,220])
+lower = np.array([70,130,220])
 upper = np.array([100,255,255])
 
 # Initializes distance, focalLength, and the count

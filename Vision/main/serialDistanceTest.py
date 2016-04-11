@@ -22,7 +22,7 @@ cy = 0
 goal = False
 
 #Import the undistortion matrix and set up dist
-mtx = np.genfromtxt('/home/ubuntu/Desktop/Code/2016-Robot-Code/Vision/main/mtx.txt')
+mtx = np.genfromtxt('mtx.txt')
 dist = np.array([ -5.08941357e-01,-2.73762518e-02,2.94200341e-03,1.50764126e-03,2.12977986e+00])
 
 # Sets up the webcam and connects to it and initalizes a variable we use for it

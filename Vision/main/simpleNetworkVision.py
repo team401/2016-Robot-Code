@@ -1,6 +1,8 @@
 import numpy as np
 import cv2
 import requests
+import sys
+import linecache
 from time import sleep
 from networktables import NetworkTable
 import logging
@@ -11,12 +13,20 @@ NetworkTable.setClientMode()
 NetworkTable.initialize()
 sd = NetworkTable.getTable("SmartDashboard")
 
-lower = np.array([70,215,220])
+lower = np.array([70,130,220])
 upper = np.array([100,255,255])
 
 focalLength = 730.5
-mtx = np.genfromtxt('/home/ubuntu/Desktop/Code/2016-Robot-Code/Vision/main/mtx.txt')
+mtx = np.genfromtxt('mtx.txt')
 dist = np.array([ -5.08941357e-01,-2.73762518e-02,2.94200341e-03,1.50764126e-03,2.12977986e+00])
+
+def ErrorHandler():
+    exc_type, exc_obj, tb = sys.exc_info()
+    f = tb.tb_frame
+    lineno = tb.tb_lineno
+    filename = f.f_code.co_filename
+    line = linecache.getline(filename, lineno, f.f_globals)
+    print 'EXCEPTION IN ({}, LINE {} "{}"): {}'.format(filename, lineno, line.strip(), exc_obj)
 
 while(True):
     try:
@@ -52,16 +62,17 @@ while(True):
         res = cv2.bitwise_and(dst,dst, mask= mask)
         imgray = cv2.cvtColor(res,cv2.COLOR_BGR2GRAY)
         ret,thresh = cv2.threshold(imgray,127,255,0)
-        contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+        ret, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
 
         areas = [cv2.contourArea(c) for c in contours]
         max_index = np.argmax(areas)
         cnt = contours[max_index]
-
-        (x,y),size = cv2.minAreaRect(cnt)
+        
+        (xCoord,yCoord),size,angle = cv2.minAreaRect(cnt)
     
-        sd.putNumber('xCoord', x)
-        sd.putNumber('yCoord', y)     
+        sd.putNumber('xCoord', xCoord)
+        sd.putNumber('yCoord', yCoord)    
     
     except Exception as e:
+        ErrorHandler()
         pass      
