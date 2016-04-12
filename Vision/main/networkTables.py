@@ -1,4 +1,4 @@
-import sys
+import numpy as np
 import time
 from networktables import NetworkTable
 import logging
@@ -6,11 +6,9 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-if len(sys.argv) != 2:
-    print("Error: specify an IP to connect to!")
-    exit(0)
 
-ip = sys.argv[1]
+ip = '10.4.1.2'
+
 
 NetworkTable.setIPAddress(ip)
 NetworkTable.setClientMode()
@@ -20,14 +18,9 @@ sd = NetworkTable.getTable("SmartDashboard")
 
 
 while True:
-    try:
-        print('robotTime:', sd.getNumber('robotTime'))
-    except KeyError:
-        print('robotTime: N/A')
-
-    sd.putNumber('distance', distance)
-    sd.putNumber('angle', angle)
+    x = np.random.rand() * 100
+    y = np.random.rand() * 100
     sd.putNumber('x', x)
     sd.putNumber('y', y)     
     
-    time.sleep(1)
+    time.sleep(0.01)
