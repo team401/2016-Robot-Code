@@ -31,7 +31,7 @@
 	</Item>
 	<Item Name="Target" Type="RT myRIO">
 		<Property Name="alias.name" Type="Str">Target</Property>
-		<Property Name="alias.value" Type="Str">roborio-401-frc.local</Property>
+		<Property Name="alias.value" Type="Str">10.4.1.2</Property>
 		<Property Name="CCSymbols" Type="Str">OS,Linux;CPU,ARM;DeviceCode,76F2;TARGET_TYPE,RT;</Property>
 		<Property Name="crio.ControllerPID" Type="Str">76F2</Property>
 		<Property Name="crio.family" Type="Str">ARMLinux</Property>
@@ -169,7 +169,6 @@ AddOutputFilter chunkFilter
 		<Item Name="B Move Dart.vi" Type="VI" URL="../B Move Dart.vi"/>
 		<Item Name="B Drive Distance.vi" Type="VI" URL="../B Drive Distance.vi"/>
 		<Item Name="B Turn.vi" Type="VI" URL="../B Turn.vi"/>
-		<Item Name="Vision Processing.vi" Type="VI" URL="../../../Documents/LabVIEW Data/ledTest/Vision Processing.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -470,7 +469,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CameraStart.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraStart.vi"/>
 				<Item Name="WPI_CameraStartStopCount.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/USB Support/WPI_CameraStartStopCount.vi"/>
 				<Item Name="WPI_CameraStop.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraStop.vi"/>
-				<Item Name="WPI_CameraUpdate Camera Status.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraUpdate Camera Status.vi"/>
 				<Item Name="WPI_CameraWhite Balance Values.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/WPI_CameraWhite Balance Values.ctl"/>
 				<Item Name="WPI_CameraWhiteBalanceConstants.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Camera/USB Support/WPI_CameraWhiteBalanceConstants.vi"/>
 				<Item Name="WPI_CAN_MotorMessageIDs.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/Jaguar/SubVIs/WPI_CAN_MotorMessageIDs.ctl"/>
@@ -820,7 +818,6 @@ AddOutputFilter chunkFilter
 			<Item Name="A Auto Aim.vi" Type="VI" URL="../A Auto Aim.vi"/>
 			<Item Name="A Inches to Potentiometer.vi" Type="VI" URL="../Firing Code/A Inches to Potentiometer.vi"/>
 			<Item Name="Custom Gyro Drive.vi" Type="VI" URL="../Custom Gyro Drive.vi"/>
-			<Item Name="Robot Global Data.vi" Type="VI" URL="../../../Documents/LabVIEW Data/ledTest/Robot Global Data.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
